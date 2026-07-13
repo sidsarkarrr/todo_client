@@ -12,7 +12,7 @@ const CreateTask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:4000/api/create", { title, description });
+            await axios.post("https://todo-backend-gbvt.onrender.com/api/create", { title, description });
             setMessage("Task created successfully!");
             setError("");
             setTitle("");

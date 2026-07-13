@@ -11,7 +11,7 @@ const AllTasks = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get('http://localhost:4000/api/tasks')
+            axios.get('https://todo-backend-gbvt.onrender.com/api/tasks')
                 .then(response => {
                     setTasks(response.data);
                     setLoading(false);

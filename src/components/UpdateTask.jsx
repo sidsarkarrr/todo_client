@@ -13,7 +13,7 @@ const UpdateTask = () => {
     useEffect(() => {
         const fetchTask = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/task/${id}`);
+                const response = await axios.get(`https://todo-backend-gbvt.onrender.com/api/task/${id}`);
                 setTitle(response.data.title);
                 setDescription(response.data.description);
             } catch (error) {
@@ -26,7 +26,7 @@ const UpdateTask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:4000/api/edit/${id}`, { title, description });
+            await axios.put(`https://todo-backend-gbvt.onrender.com/api/edit/${id}`, { title, description });
             setMessage("Task updated successfully! redirecting to Home");
             setError("");
             navigate("/");
